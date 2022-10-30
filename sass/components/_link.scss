@@ -1,0 +1,33 @@
+.link {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #212121;
+
+  transition: color var(--primary-duration) var(--primary-cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &.active {
+    position: relative;
+    color: var(--accent-color);
+
+    &::after {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+
+      content: "";
+      width: 100%;
+      height: 4px;
+
+      border-radius: 2px;
+
+      background-color: var(--accent-color);
+    }
+  }
+}

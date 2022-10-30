@@ -1,0 +1,21 @@
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-list__item {
+  margin-right: 8px;
+
+  &:nth-last-child(1) {
+    margin-right: 0;
+  }
+}
+
+.filter-list-button {
+  padding: 6px 22px;
+
+  &:first-child {
+    padding: 6px 25px;
+  }
+}

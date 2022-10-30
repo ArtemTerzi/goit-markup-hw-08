@@ -1,0 +1,76 @@
+.team {
+  background-color: var(--secondary-background-color);
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team__title {
+  margin-bottom: 50px;
+}
+
+.team__list {
+  display: flex;
+}
+
+.team__teammate {
+  margin-right: var(--primary-gap);
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.team__name-jt {
+  padding-top: var(--primary-gap);
+  padding-bottom: var(--primary-gap);
+}
+
+.team__name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.team__job-title {
+  color: var(--secondary-text-color);
+  margin-bottom: 16px;
+}
+
+.team__soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.team__soc-item {
+  display: flex;
+  background-color: transparent;
+}
+
+.team__soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-icon-color);
+  fill: currentColor;
+
+  transition: color var(--primary-duration) var(--primary-cubic),
+    background-color var(--primary-duration) var(--primary-cubic);
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: var(--accent-color);
+  }
+}

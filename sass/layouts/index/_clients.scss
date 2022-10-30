@@ -1,0 +1,40 @@
+.clients__title {
+  margin-bottom: 50px;
+}
+
+.clients__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.clients__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--primary-icon-color);
+  border-radius: 4px;
+  cursor: pointer;
+
+  color: var(--primary-icon-color);
+  fill: currentColor;
+
+  transition: color var(--primary-duration) var(--primary-cubic),
+    border-color var(--primary-duration) var(--primary-cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}
