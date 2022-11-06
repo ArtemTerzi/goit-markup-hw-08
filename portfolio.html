@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="description" content="Вебстудія" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Студія</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,10 +26,58 @@
       <nav class="nav">
         <ul class="nav__list">
           <!-- В данному списку необхідно оновити лінки після їх отримання -->
-          <li class="nav__item"><a href="./index.html" class="link ">Студія</a></li>
+          <li class="nav__item"><a href="./index.html" class="link">Студія</a></li>
           <li class="nav__item"><a href="./portfolio.html" class="link active">Портфоліо</a></li>
-          <li class="nav__item"><a href="./index.html" class="link">Контакти</a></li>
+          <li class="nav__item"><a href="#contacts" class="link">Контакти</a></li>
         </ul>
+        <button type="button" class="mobile-menu-btn js-open-menu" aria-label="Меню відкриття навігації сайту"
+          aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="40" height="40" class="mobile-menu-btn__icon">
+            <use href="./images/icons.svg#icon-menu" class="mobile-menu-btn__menu"></use>
+            <!-- <use href="./images/icons.svg#icon-close-menu" class="mobile-menu-btn__close-menu js-close-menu"></use> -->
+          </svg>
+        </button>
+        <!-- Mobile-menu -->
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <div class="mobile-menu">
+            <button type="button" class="mobile-menu-btn js-close-menu" aria-label="Закриття меню навігації сайту"
+              aria-expanded="false" aria-controls="mobile-menu">
+              <svg width="40" height="40" class="mobile-menu-btn__icon-close">
+                <use href="./images/icons.svg#icon-close-menu" class="mobile-menu-btn__close-menu"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__nav-list">
+              <!-- В данному списку необхідно оновити лінки після їх отримання -->
+              <li class="mobile-menu__nav-item"><a href="./index.html" class="link">Студія</a>
+              </li>
+              <li class="mobile-menu__nav-item"><a href="./portfolio.html"
+                  class=" mobile-menu__nav-link--active link">Портфоліо</a></li>
+              <li class="mobile-menu__nav-item"><a href="#contacts" class="link">Контакти</a></li>
+            </ul>
+            <div class="contacts-container">
+              <ul class="mobile-menu__contact-list">
+                <li class="mobile-menu__contact-item icon-tel"><a href="tel:+380961111111"
+                    class="mobile-menu__contact mobile-menu__contact--accent link">
+                    +38 096 111 11 11</a></li>
+                <li class="mobile-menu__contact-item icon-mail"><a href="mailto:info@devstudio.com"
+                    class="mobile-menu__contact link">
+                    info@devstudio.com</a>
+                </li>
+              </ul>
+              <ul class="mobile-menu__link-list">
+                <li class="mobile-menu__link-item"><a href="https://instagram.com" class="mobile-menu__link link"
+                    target="
+                          _blank" rel="noopener noreferrer nofollow">Instagram</a></li>
+                <li class="mobile-menu__link-item"><a href="https://twitter.com" class="mobile-menu__link link" target="
+                          _blank" rel="noopener noreferrer nofollow">Twitter</a>
+                <li class="mobile-menu__link-item"><a href="https://facebook.com" class="mobile-menu__link link" target="
+                          _blank" rel="noopener noreferrer nofollow">Facebook</a>
+                <li class="mobile-menu__link-item"><a href="https://linkedin.com" class="mobile-menu__link link" target="
+                          _blank" rel="noopener noreferrer nofollow">LinkedIn</a>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
       <ul class="contact-list">
         <li class="contact-list__item icon-mail"><a href="mailto:info@devstudio.com" class="contact-list__contact link">
@@ -67,7 +116,14 @@
           <li class="project">
             <a href="./portfolio.html" class="project__link">
               <div class="project__thumb">
-                <img src="./images/proj-technocrack-web-site.jpg" alt="Вигляд веб-сайту Технокряк" />
+                <picture>
+                  <source
+                    srcset="./images/proj-technocrack-web-site.webp 1x, ./images/proj-technocrack-web-site@2x.webp 2x"
+                    type="image/webp">
+                  <img srcset="./images/proj-technocrack-web-site.jpg 1x, ./images/proj-technocrack-web-site@2x.jpg 2x"
+                    src="./images/proj-technocrack-web-site.jpg" alt="Вигляд веб-сайту Технокряк" width="370"
+                    height="294" width="270" />
+                </picture>
                 <div class="project__description">
                   <p class="project__hidden-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                     сервісів. Все це дозволить
@@ -85,8 +141,16 @@
           <li class="project">
             <a href="./portfolio.html" class="project__link">
               <div class="project__thumb">
-                <img src="./images/proj-poster-new-orlean-vs-golden-star-design.jpg"
-                  alt="Постер баскетбольної гри Нового Орлеану проти Голден Стару" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/proj-poster-new-orlean-vs-golden-star-design.webp 1x, ./images/proj-poster-new-orlean-vs-golden-star-design@2x.webp 2x"
+                    type="image/webp">
+                  <img
+                    srcset="./images/proj-poster-new-orlean-vs-golden-star-design.jpg 1x, ./images/proj-poster-new-orlean-vs-golden-star-design@2x.jpg 2x"
+                    src="./images/proj-poster-new-orlean-vs-golden-star-design.jpg"
+                    alt="Постер баскетбольної гри Нового Орлеану проти Голден Стару" width="370" height="294"
+                    width="270" />
+                </picture>
                 <div class="project__description">
                   <p class="project__hidden-text"> Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                     сервісів. Все це дозволить
@@ -107,8 +171,15 @@
           <li class="project">
             <a href="./portfolio.html" class="project__link">
               <div class="project__thumb">
-                <img src="./images/proj-restaurant-seafood-app.jpg" alt="Вигляд додатку для ресторану Сіфуд"
-                  width="370" />
+                <picture>
+                  <source
+                    srcset="./images/proj-restaurant-seafood-app.webp 1x, ./images/proj-restaurant-seafood-app@2x.webp 2x"
+                    type="image/webp">
+                  <img
+                    srcset="./images/proj-restaurant-seafood-app.jpg 1x, ./images/proj-restaurant-seafood-app@2x.jpg 2x"
+                    src="./images/proj-restaurant-seafood-app.jpg" alt="Вигляд додатку для ресторану Сіфуд" width="370"
+                    height="294" width="270" />
+                </picture>
                 <div class="project__description">
                   <p class="project__hidden-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                     сервісів. Все це дозволить
@@ -126,8 +197,13 @@
           <li class="project">
             <a href="./portfolio.html" class="project__link">
               <div class="project__thumb">
-                <img src="./images/proj-prime-marketing.jpg" alt="Приклад маркетингового проєкту Прайм, навушники"
-                  width="370" />
+                <picture>
+                  <source srcset="./images/proj-prime-marketing.webp 1x, ./images/proj-prime-marketing@2x.webp 2x"
+                    type="image/webp">
+                  <img srcset="./images/proj-prime-marketing.jpg 1x, ./images/proj-prime-marketing@2x.jpg 2x"
+                    src="./images/proj-prime-marketing.jpg" alt="Приклад маркетингового проєкту Прайм, навушники"
+                    width="370" height="294" width="270" />
+                </picture>
                 <div class="project__description">
                   <p class="project__hidden-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                     сервісів. Все це дозволить
@@ -145,8 +221,13 @@
           <li class="project">
             <a href="./portfolio.html" class="project__link">
               <div class="project__thumb">
-                <img src="./images/proj-boxes-app.jpg" alt="Приклад проєкту по створенню крафтових коробок Боксес"
-                  width="370" />
+                <picture>
+                  <source srcset="./images/proj-boxes-app.webp 1x, ./images/proj-boxes-app@2x.webp 2x"
+                    type="image/webp">
+                  <img srcset="./images/proj-boxes-app.jpg 1x, ./images/proj-boxes-app@2x.jpg 2x"
+                    src="./images/proj-boxes-app.jpg" alt="Приклад проєкту по створенню крафтових коробок Боксес"
+                    width="370" height="294" width="270" />
+                </picture>
                 <div class="project__description">
                   <p class="project__hidden-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                     сервісів. Все це дозволить
@@ -164,8 +245,15 @@
           <li class="project">
             <a href="./portfolio.html" class="project__link">
               <div class="project__thumb">
-                <img src="./images/proj-inspiration-has-no-borders-web-site.jpg"
-                  alt="Приклад веб-сайту під назвою Натхнення немає меж" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/proj-inspiration-has-no-borders-web-site.webp 1x, ./images/proj-inspiration-has-no-borders-web-site@2x.webp 2x"
+                    type="image/webp">
+                  <img
+                    srcset="./images/proj-inspiration-has-no-borders-web-site.jpg 1x, ./images/proj-inspiration-has-no-borders-web-site@2x.jpg 2x"
+                    src="./images/proj-inspiration-has-no-borders-web-site.jpg"
+                    alt="Приклад веб-сайту під назвою Натхнення немає меж" width="370" height="294" width="270" />
+                </picture>
                 <div class="project__description">
                   <p class="project__hidden-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                     сервісів. Все це дозволить
@@ -183,8 +271,15 @@
           <li class="project">
             <a href="./portfolio.html" class="project__link">
               <div class="project__thumb">
-                <img src="./images/proj-publ-house-limited-edition-design.jpg" alt="Фото дизайну книги з видавництва"
-                  width="370" />
+                <picture>
+                  <source
+                    srcset="./images/proj-publ-house-limited-edition-design.webp 1x, ./images/proj-publ-house-limited-edition-design@2x.webp 2x"
+                    type="image/webp">
+                  <img
+                    srcset="./images/proj-publ-house-limited-edition-design.jpg 1x, ./images/proj-publ-house-limited-edition-design@2x.jpg 2x"
+                    src="./images/proj-publ-house-limited-edition-design.jpg" alt="Фото дизайну книги з видавництва"
+                    width="370" height="294" width="270" />
+                </picture>
                 <div class="project__description">
                   <p class="project__hidden-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                     сервісів. Все це дозволить
@@ -202,7 +297,13 @@
           <li class="project">
             <a href="./portfolio.html" class="project__link">
               <div class="project__thumb">
-                <img src="./images/proj-lab-marketing.jpg" alt="Фото дизайну бренду лаб" />
+                <picture>
+                  <source srcset="./images/proj-lab-marketing.webp 1x, ./images/proj-lab-marketing@2x.webp 2x"
+                    type="image/webp">
+                  <img srcset="./images/proj-lab-marketing.jpg 1x, ./images/proj-lab-marketing@2x.jpg 2x"
+                    src="./images/proj-lab-marketing.jpg" alt="Фото дизайну бренду лаб" width="370" height="294"
+                    width="270" />
+                </picture>
                 <div class="project__description">
                   <p class="project__hidden-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                     сервісів. Все це дозволить
@@ -220,8 +321,14 @@
           <li class="project">
             <a href="./portfolio.html" class="project__link">
               <div class="project__thumb">
-                <img src="./images/proj-growing-business-app.jpg" alt="Фото проєкту додатку для зростання бізнесу"
-                  width="370" />
+                <picture>
+                  <source
+                    srcset="./images/proj-growing-business-app.webp 1x, ./images/proj-growing-business-app@2x.webp 2x"
+                    type="image/webp">
+                  <img srcset="./images/proj-growing-business-app.jpg 1x, ./images/proj-growing-business-app@2x.jpg 2x"
+                    src="./images/proj-growing-business-app.jpg" alt="Фото проєкту додатку для зростання бізнесу"
+                    width="370" height="294" width="270" />
+                </picture>
                 <div class="project__description">
                   <p class="project__hidden-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                     сервісів. Все це дозволить
@@ -240,7 +347,7 @@
     </section>
   </main>
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="container">
       <div class="footer__contacts"><a href="./index.html" class="logo footer__logo">
           <span lang="en" class="logo--accent">Web</span><span lang="en" class="footer__text">Studio</span>
@@ -300,6 +407,11 @@
       </div>
     </div>
   </footer>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
