@@ -6,12 +6,17 @@
   font-size: 26px;
   line-height: 1.19;
   color: black;
-  padding-bottom: 25px;
-  padding-top: 24px;
+  padding-bottom: 16px;
+  padding-top: 16px;
 
-  .container > & {
-    margin-right: 93px;
+  @include tablet {
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
+
+  // .container > & {
+  //   margin-right: 93px;
+  // }
 }
 
 .logo--accent {

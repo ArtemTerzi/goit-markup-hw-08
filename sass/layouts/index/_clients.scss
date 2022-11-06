@@ -1,5 +1,15 @@
 .clients__title {
-  margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 1.17;
+
+  margin-bottom: var(--primary-gap);
+
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.17;
+
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
@@ -7,19 +17,30 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .clients__item {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include calc(2);
+
+  @include tablet {
+    @include calc(3);
+  }
+
+  @include desktop {
+    @include calc(6);
+  }
 }
 
 .clients__link {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 92px;
 
   border: 1px solid var(--primary-icon-color);
@@ -36,5 +57,9 @@
   &:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
+  }
+
+  @include desktop {
+    width: 170px;
   }
 }

@@ -1,4 +1,9 @@
 .section {
-  padding-bottom: var(--primary-section-padding);
-  padding-top: var(--primary-section-padding);
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @include desktop {
+    padding-bottom: var(--primary-section-padding);
+    padding-top: var(--primary-section-padding);
+  }
 }
