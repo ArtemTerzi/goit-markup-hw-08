@@ -516,6 +516,11 @@ body {
   padding-bottom: 0;
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    text-align: start;
+  }
+}
 
 .footer__text {
   color: #ffffff;
@@ -525,6 +530,11 @@ body {
   display: inline-block;
   text-align: center;
   font-style: normal;
+}
+@media screen and (min-width: 1200px) {
+  .address__list {
+    text-align: start;
+  }
 }
 
 .address__item {

@@ -38,6 +38,10 @@
   padding-bottom: 0;
 
   text-align: center;
+
+  @include desktop {
+    text-align: start;
+  }
 }
 
 .footer__text {
@@ -49,6 +53,10 @@
   text-align: center;
 
   font-style: normal;
+
+  @include desktop {
+    text-align: start;
+  }
 }
 .address__item {
   margin-bottom: 9px;
