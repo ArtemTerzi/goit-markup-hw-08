@@ -4,7 +4,15 @@
   padding-right: 15px;
   width: 100%;
 
+  @include mobile {
+    width: 480px;
+  }
+
+  @include tablet {
+    width: 768px;
+  }
+
   @include desktop {
-    max-width: 1200px;
+    width: 1200px;
   }
 }

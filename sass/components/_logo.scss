@@ -14,9 +14,9 @@
     padding-bottom: 25px;
   }
 
-  // .container > & {
-  //   margin-right: 93px;
-  // }
+  @include desktop {
+    margin-right: 93px;
+  }
 }
 
 .logo--accent {
